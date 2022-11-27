@@ -43,7 +43,7 @@ export const meta: MetaFunction = () => {
     "og:image": ogimage,
     "og:image:type": "image/jpeg",
     "og:site_name": "weddingoryzaroma",
-    "og:url": "http://www.weddingoryzaroma.com/",
+    "og:url": "https://wedding-oryza-roma.vercel.app",
     "og:title": "Wedding Invitation of Oryza & Roma",
     "og:description": `Minggu, 11 Desember 2022, Bandung`,
     "og:type": "website",
@@ -62,9 +62,9 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta property="og:title" content="The Wedding Of Oryza and Roma" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/igmerwina/wedding-invitation/master/app/images/ogimages.jpg"/>
+        <meta property="og:image" content="https://raw.githubusercontent.com/romadhonafajar/wedding-invitation/main/app/images/QRT/QRTEDIT-0355.jpg"/>
         <meta property="description" content="The Wedding of Oryza and Roma. Sunday, 11 December 2022" />
-        <meta property="og:url" content="https://www.weddingoryzaroma.com/" />
+        <meta property="og:url" content="https://wedding-oryza-roma.vercel.app" />
         <Meta />
         <Links />
       </head>
