@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useLoaderData } from "remix";
 import { LoaderDataType } from "~/controls";
 import TextWithLine from "./Utils/TextWithLine";
-import welcomeImage from "~/images/QRT/QRTEDIT-9377.jpg";
+import welcomeImage from "~/images/QRT/QRTEDIT-9533.jpg";
 
 interface WelcomeModalProps {
   isOpen: boolean;
@@ -22,7 +22,8 @@ export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
     >
       <div className="bg-[#EFEFEF] h-screen w-screen flex flex-row justify-center items-start fixed overflow-auto py-20 box-border">
         <div className="flex flex-col items-center p-5 bg-no-repeat bg-center bg-contain my-auto w-full md:w-[500]"
-          style={{ backgroundImage: `url(${welcomeImage})` }} >
+          // style={{ backgroundImage: `url(${welcomeImage})` }}
+          >
           <h5 className="text-center font-medium font-sans text-xl md:text-2xl mb-2 md:mb-3 text-gray-600"
             style={{ textShadow: "3px 3px 2px #EFEFEF" }}
             >

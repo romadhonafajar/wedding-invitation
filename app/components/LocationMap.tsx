@@ -9,6 +9,8 @@ const MAP_TITLE = "Istana Kana Kawaluyaan";
 const MAP_ADDRESS = "Jl. Kawaluyaan Indah raya No. 9, Jatisari, Kec. Buahbatu, Kota Bandung, Jawa Barat";
 
 const LocationMap = (data: any) => {
+  const { isBoth: isBoth } = useLoaderData<LoaderDataType>();
+
   return (
     <div className="py-10 bg-[#EFEFEF]">
       <SectionWrapper>
@@ -21,13 +23,20 @@ const LocationMap = (data: any) => {
               <h4 className="text-xl md:text-xl mb-4 font-sans">
                 {MAP_TITLE}
               </h4>
-              <p className="mb-16 md:mb-5 font-sans font-normal">{MAP_ADDRESS}</p>
-              <h3 className="text-2xl font-head mb-3">
-                Akad
-              </h3>
-              <p className="mb-1 font-sans text-xl">Minggu, 11 Desember 2022</p>
-              <p className="mb-1 font-sans text-xl">🕰 08.00 - 10.00 WIB </p>
-              <p className="mb-5 font-sans text-sm"><b>*Hanya dihadiri keluarga</b></p>
+              {
+                isBoth === '1' && (
+                  <div>
+                    <p className="mb-16 md:mb-5 font-sans font-normal">{MAP_ADDRESS}</p>
+                    <h3 className="text-2xl font-head mb-3">
+                      Akad
+                    </h3>
+                    <p className="mb-1 font-sans text-xl">Minggu, 11 Desember 2022</p>
+                    <p className="mb-1 font-sans text-xl">🕰 08.00 - 10.00 WIB </p>
+                    <p className="mb-5 font-sans text-sm"><b>*Hanya dihadiri keluarga</b></p>
+                  </div>
+                )
+              } 
+              
               <h3 className="text-2xl font-head mb-3">
                 Resepsi
               </h3>
