@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Agendas from "~/components/Agendas";
 import BrideAndGroom from "~/components/BrideAndGroom";
 import Countdown from "~/components/Countdown";
 import LocationMap from "~/components/LocationMap";
@@ -8,11 +7,10 @@ import Message from "~/components/Massage";
 import SectionWrapper from "~/components/Utils/SectionWrapper";
 import WelcomeModal from "~/components/WelcomeModal";
 import { indexAction, indexLoader, LoaderDataType } from "~/controls";
-import heroBg from "~/images/hero-bg.jpg";
-import heroBgMobile from "~/images/hero-bg-mobile.jpg";
+import heroBg from "~/images/QRT/QRTEDIT-0355.jpg";
+import heroBgMobile from "~/images/QRT/QRTEDIT-0355.jpg";
 import MusicPlayer from "~/components/MusicPlayer";
 import GalleryPhotos from "~/components/GalleryPhotos";
-import LocationMapLombok from "~/components/LocationMapLombok";
 import ProtokolKesehatan from "~/components/Protokol";
 import OpeningMessage from "~/components/OpeningMessage";
 import { useLoaderData } from "remix";
@@ -61,7 +59,7 @@ export default function Index() {
                 The Wedding Of
               </h5>
               <h4 className="text-center font-head font-bold text-4xl mb-4 text-[#fff]">
-                Erwin & Iin
+                Oryza & Roma
               </h4>
             </div>
           </div>
@@ -74,7 +72,7 @@ export default function Index() {
               </h5>
               <h4 className="text-center font-head text-8xl text-[#EFEFEF]"
                 style={{ textShadow: "3px 3px 2px #CE7BB0" }} >
-                Erwin <br /> -&- <br /> Iin
+                Oryza <br /> -&- <br /> Roma
               </h4>
             </div>
           </div>
@@ -89,29 +87,13 @@ export default function Index() {
         <BrideAndGroom />
       </SectionWrapper>
 
-      <SectionWrapper className="mb-5">
-        <Agendas />
-      </SectionWrapper>
-
       <SectionWrapper className="mb-10">
         <Countdown />
       </SectionWrapper>
 
-      {isBoth === '1' ? (
-        <div>
-          <SectionWrapper className="mb-10 pt-1">
-            <LocationMap />
-          </SectionWrapper>
-
-          <SectionWrapper className="mb-20">
-            <LocationMapLombok />
-          </SectionWrapper>
-        </div>
-      ) : (
-        <SectionWrapper className="mb-10 pt-1">
-          <LocationMapLombok />
-        </SectionWrapper>
-      )}
+      <SectionWrapper className="mb-10 pt-1">
+        <LocationMap />
+      </SectionWrapper>
 
       <SectionWrapper className="mb-20">
         <GalleryPhotos />

@@ -1,6 +1,6 @@
 import TextWithLine from "./Utils/TextWithLine";
-import bride from "~/images/erwincp.jpg";
-import groom from "~/images/iin.jpg";
+import bride from "~/images/bride.jpg";
+import groom from "~/images/groom.jpg";
 
 const BrideAndGroom = () => {
   return (
@@ -13,19 +13,19 @@ const BrideAndGroom = () => {
           <div className="flex flex-col items-center py-14 sm:px-8 lg:p-20 text-center">
             <img
               src={bride}
-              alt="pengantin perempuan"
+              alt="Pengantin Wanita"
               className="w-80 h-100 rounded-full mb-8"
             />
             <h3 className="text-xl font-medium font-head mb-4 text-black">
-              I Gusti Made Erwin Ardiantha, M.T
+              Oryza Sativani
             </h3>
             <div className="mb-4">
-              <TextWithLine>Pengantin Pria</TextWithLine>
+              <TextWithLine>Pengantin Wanita</TextWithLine>
             </div>
             <p className="font-head text-gray-600 leading-6">
-              Putra kedua dari <br/>
-              Bapak dr. I Gusti Putu Winangun Sp.PD & <br/>
-              Ibu Dra. Ni Made Citra Resmi, M.M
+              Putri dari <br/>
+              Bapak Ridwan & <br/>
+              Ibu Siti Murwati
             </p>
           </div>
         </div>
@@ -35,21 +35,21 @@ const BrideAndGroom = () => {
             <div className="flex flex-col items-center">
               <img
                 src={groom}
-                alt="pengantin laki-laki"
+                alt="Pengantin Pria"
                 className="w-80 h-100 rounded-full mb-8"
               />
               <h3 className="text-xl font-medium font-head mb-4 text-black">
-                Putu Ayu Indira Savitri, S.Si.Kom
+                Romadhona Fajar
               </h3>
             </div>
             <div className="flex flex-col items-center">
               <div className="mb-4">
-                <TextWithLine>Pengantin Wanita</TextWithLine>
+                <TextWithLine>Pengantin Pria</TextWithLine>
               </div>
               <p className="font-head text-gray-600 leading-6">
-                Putri pertama dari <br /> 
-                Bapak Ir. I Made Budiasa Astawa & <br />
-                Ibu Ir. Putu Nuryati (Almh.)
+                Putra dari <br /> 
+                Bapak Alm. Edih Kusnadi & <br />
+                Ibu Tuti Surwati
               </p>
             </div>
           </div>

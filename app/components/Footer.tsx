@@ -30,19 +30,19 @@ const Footer = () => {
             Kami yang berbahagia, <br />
           </p>
           {isMobile ? (
-            <p> Kel. dr. IGP Winangun, Sp.PD & <br /> Kel. Ir. I Made Budiasa Astawa<br /> </p>
+            <p> Kel. Bapak Ridwan & <br /> Kel. Ibu Tuti Surwati<br /> </p>
           ) : (
-            <p> Kel. dr. IGP Winangun, Sp.PD &emsp;&emsp;&emsp; & &emsp;&emsp;&emsp; Kel. Ir. I Made Budiasa Astawa<br /> </p>
+            <p> Kel. Bapak Ridwan &emsp;&emsp;&emsp; & &emsp;&emsp;&emsp; Kel. Ibu Tuti Surwati<br /> </p>
           )}
           <br />
           <div className="m-auto sm:w-24 sm:h-24 h-16 w-16 bg-center bg-contain bg-no-repeat px-10"
             style={{ backgroundImage: `url(${lotus})` }} >
           </div>
-          <i>Om Shanti Shanti Shanti Om...</i>
+          <i>Wassalamualaikum Warrahmatullahi Wabarakatuh</i>
           <TextWithLine>•••</TextWithLine>
         </div>
 
-        <div className="text-center text-sm sm:text-lg font-light font-sans text-gray-900 bg-[#e2e2e2]">
+        {/* <div className="text-center text-sm sm:text-lg font-light font-sans text-gray-900 bg-[#e2e2e2]">
           <div className="p-3 grid sm:grid-cols-2 gap-4 sm:text-right sm:border-r-4 sm:text-sm">
             <p>
               © {(new Date().getFullYear())} - build with 💕 by <strong><a href="https://instagram.com/igmerwina" target="blank"><b><u>Erwin</u></b></a></strong>
@@ -66,7 +66,7 @@ const Footer = () => {
               </div>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -3,14 +3,14 @@ import { useLoaderData } from "remix";
 import { LoaderDataType } from "~/controls";
 import TextWithLine from "./Utils/TextWithLine";
 
-const EVENT_DATE = "November 20, 2022 11:00:00";
+const EVENT_DATE = "December 11, 2022 11:00:00";
 const COUNTDOWN_DATE = new Date(EVENT_DATE).getTime();
 const CALENDAR_URL = `https://www.google.com/calendar/render?
 action=TEMPLATE&
-text=Resepsi+Erwin+%26+Iin+💕+&
-location=Hotel Lombok Astoria - Rembiga, Kota Mataram, NTB &
+text=Resepsi+Oryza+%26+Roma+💕+&
+location=Istana+Kana+Kawaluyaan&
 details=Dengan sepenuh kerendahan hati dan rasa syukur kepada Tuhan YME%2C kami ingin menyampaikan kabar bahagia mengenai resepsi pernikahan kami berdua%3A I Gusti Made Erwin A dan Putu Ayu Indira Savitri.%0A%0ATautan undangan%3A%0Ahttp%3A%2F%2Fwww.weddingerwiniin.com%2F%0A%0AMerupakan suatu kebahagiaan bagi kami jika Bapak%2FIbu%2FSaudara%2Fi berkenan hadir dalam acara resepsi pernikahan kami serta%2F memberikan doa restu.%0A%0AAtas perhatiannya%2C kami ucapkan terima kasih.%0A%0AKami yang berbahagia%2C%0AErwin %26 Iin&
-dates=20221120T110000Z+08:00%2F20221120T140000Z+08:00`;
+dates=20221211T110000Z+08:00%2F20221211T130000Z+08:00`; //TODO
 
 interface COUNTDOWNTYPE {
   days: number;
@@ -56,7 +56,7 @@ const Countdown = memo(() => {
   return (
     <div className="w-full px-1 md:px-4">
       <div className="text-3xl font-head font-bold text-center mb-10 pt-10 text-gray-700 px-2">
-        <TextWithLine>Save The Date</TextWithLine>
+        <TextWithLine>Tanggal Acara</TextWithLine>
       </div>
 
       <div className="flex justify-center pb-10">
@@ -66,16 +66,10 @@ const Countdown = memo(() => {
         <NumberCard number={countdown.seconds} label="Detik" />
       </div>
 
-      {isBoth === '1' ? (
-        <h3 className="text-2xl md:text-3xl mb-6 text-center text-gray-700 font-head">
-          Kamis, 13 Oktober 2022 <br /> <TextWithLine>&</TextWithLine> Minggu, 20 November 2022
-        </h3>
-      ) : (
-        <h3 className="text-2xl md:text-3xl mb-6 text-center text-gray-700 font-head">
-          Minggu, 20 November 2022
-        </h3>)
-      }
-         <div className="px-12 flex max-w-md mx-auto mb-10 text-center">
+      <h3 className="text-2xl md:text-3xl mb-6 text-center text-gray-700 font-head">
+          Minggu, 11 Desember 2022
+      </h3>
+      <div className="px-12 flex max-w-md mx-auto mb-10 text-center">
         <a
           href={CALENDAR_URL}
           target={"_blank"}

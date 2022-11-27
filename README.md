@@ -1,19 +1,6 @@
-# Wedding invitation erwin & iin 
+# Wedding invitation oryza and roma
 
-Based on [amifauzi](https://github.com/fauzialz/amifauzi.com-open) wedding invitation.
-
-Available features:
-
-- Welcome modal connected to Google Sheet
-- Hero section with a responsive background picture
-- Bride and Groom section
-- Countdown until marriage date section
-- Agendas section
-- Google Map section
-- Pre-wedding gallery section
-- Message section connected to Google Sheet
-- Digital Envelope section
-- Background music Player
+Based on [igmerwina](https://github.com/igmerwina/wedding-invitation) wedding invitation.
 
 ## Depelopment
 

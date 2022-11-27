@@ -4,34 +4,35 @@ import SectionWrapper from "./Utils/SectionWrapper";
 import TextWithLine from "./Utils/TextWithLine";
 
 const MAP_REDIRECT_URL =
-  "https://www.google.com/maps/dir//Balai+Bajar+Cacab+Jangkahan,+H5G7%2BX44,+Cacab,+Biaung,+Penebel,+Tabanan+Regency,+Bali+82181/@-8.422521,115.1277957,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x2dd225d389fc9011:0x49760d2db5b741a4!2m2!1d115.1628337!2d-8.4226115!3e0";
-const MAP_TITLE = "Dusun Cacab, Penebel, Tabanan";
-const MAP_ADDRESS =
-  "Dusun Cacab, Desa Biaung. Kec. Penebel, Kab. Tabanan, Bali";
+  "https://www.google.com/maps/dir/-6.9194594,107.6596613/Istana+Kana+Kawaluyaan+Istana+Kana+Kawaluyaan,+Jl.+Kawaluyaan+Raya+No.9,+Jatisari,+Kec.+Buahbatu,+Kota+Bandung,+Jawa+Barat+40286/@-6.9289635,107.6464535,15z/data=!3m1!4b1!4m15!1m6!3m5!1s0x2e68e81caa041123:0xb21c402f358e02e2!2sIstana+Kana+Kawaluyaan!8m2!3d-6.9368388!4d107.6632507!4m7!1m0!1m5!1m1!1s0x2e68e81caa041123:0xb21c402f358e02e2!2m2!1d107.6632507!2d-6.9368388?hl=en";
+const MAP_TITLE = "Istana Kana Kawaluyaan";
+const MAP_ADDRESS = "Jl. Kawaluyaan Indah raya No. 9, Jatisari, Kec. Buahbatu, Kota Bandung, Jawa Barat";
 
-const LocationMap = () => {
-  const { isBoth: isBoth } = useLoaderData<LoaderDataType>();
-  let title = 'Resepsi';
-  isBoth === '1' ? title = 'Resepsi I' : title
-
+const LocationMap = (data: any) => {
   return (
     <div className="py-10 bg-[#EFEFEF]">
       <SectionWrapper>
       <div className="text-3xl font-head font-bold text-center mb-10 pt-3 text-gray-700">
             <h4 className="mb-1"><TextWithLine>Lokasi Acara</TextWithLine></h4>
-          </div>
-        <div className="flex flex-col-reverse md:flex-row">
+      </div>
+      <div className="flex flex-col-reverse md:flex-row">
           <div className=" w-full px-4 mb-6 md:mb-0">
             <div className="sticky top-8 text-center md:text-center text-gray-700 font-bold">
-              <h3 className="text-2xl font-head mb-3">
-                {title}
-              </h3>
               <h4 className="text-xl md:text-xl mb-4 font-sans">
                 {MAP_TITLE}
               </h4>
               <p className="mb-16 md:mb-5 font-sans font-normal">{MAP_ADDRESS}</p>
-              <p className="mb-1 font-sans text-xl">Kamis, 13 Oktober 2022</p>
-              <p className="mb-5 font-sans text-xl">🕰 11.00 - 18.00 WITA</p>
+              <h3 className="text-2xl font-head mb-3">
+                Akad
+              </h3>
+              <p className="mb-1 font-sans text-xl">Minggu, 11 Desember 2022</p>
+              <p className="mb-1 font-sans text-xl">🕰 08.00 - 10.00 WIB </p>
+              <p className="mb-5 font-sans text-sm"><b>*Hanya dihadiri keluarga</b></p>
+              <h3 className="text-2xl font-head mb-3">
+                Resepsi
+              </h3>
+              <p className="mb-1 font-sans text-xl">Minggu, 11 Desember 2022</p>
+              <p className="mb-5 font-sans text-xl">🕰 11.00 - 13.00 WIB</p>
               <div className="flex justify-center">
                 <a
                   href={MAP_REDIRECT_URL}

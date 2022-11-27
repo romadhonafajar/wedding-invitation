@@ -9,7 +9,7 @@ import {
 import type { MetaFunction, LinksFunction } from "remix";
 import styles from "./styles/app.css";
 import skeletonStyles from "react-loading-skeleton/dist/skeleton.css";
-import ogimage from "~/images/ogimages.jpg";
+import ogimage from "~/images/QRT/QRTEDIT-9561.jpg";
 
 export const links: LinksFunction = () => {
   return [
@@ -36,22 +36,22 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = () => {
   return {
-    title: "Wedding Invitation of Erwin & Iin",
+    title: "Wedding Invitation of Oryza & Roma",
     description:
-      "Kamis, 13 Oktober 2022, Bali",
+      "Minggu, 11 Desember 2022, Bandung",
 
     "og:image": ogimage,
     "og:image:type": "image/jpeg",
-    "og:site_name": "weddingerwiniin",
-    "og:url": "http://www.weddingerwiniin.com/",
-    "og:title": "Wedding Invitation of Erwin & Iin",
-    "og:description": `Kamis, 13 Oktober 2022, Bali`,
+    "og:site_name": "weddingoryzaroma",
+    "og:url": "http://www.weddingoryzaroma.com/",
+    "og:title": "Wedding Invitation of Oryza & Roma",
+    "og:description": `Minggu, 11 Desember 2022, Bandung`,
     "og:type": "website",
 
     "twitter:image": ogimage,
     "twitter:card": "summary_large_image",
     "twitter:description":
-      "Kamis, 13 Oktober 2022, Bali",
+      "Minggu, 11 Desember 2022, Bandung",
   };
 };
 
@@ -61,10 +61,10 @@ export default function App() {
       <head prefix="og: https://ogp.me/ns#">
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta property="og:title" content="The Wedding Of Erwin and Iin" />
+        <meta property="og:title" content="The Wedding Of Oryza and Roma" />
         <meta property="og:image" content="https://raw.githubusercontent.com/igmerwina/wedding-invitation/master/app/images/ogimages.jpg"/>
-        <meta property="description" content="The Wedding of Erwin and Iin. Thursday, 13 October 2022" />
-        <meta property="og:url" content="https://www.weddingerwiniin.com/" />
+        <meta property="description" content="The Wedding of Oryza and Roma. Sunday, 11 December 2022" />
+        <meta property="og:url" content="https://www.weddingoryzaroma.com/" />
         <Meta />
         <Links />
       </head>
