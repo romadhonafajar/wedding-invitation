@@ -4,7 +4,7 @@ import SectionWrapper from "./Utils/SectionWrapper";
 import TextWithLine from "./Utils/TextWithLine";
 
 const MAP_REDIRECT_URL =
-  "https://www.google.com/maps/dir/-6.9194594,107.6596613/Istana+Kana+Kawaluyaan+Istana+Kana+Kawaluyaan,+Jl.+Kawaluyaan+Raya+No.9,+Jatisari,+Kec.+Buahbatu,+Kota+Bandung,+Jawa+Barat+40286/@-6.9289635,107.6464535,15z/data=!3m1!4b1!4m15!1m6!3m5!1s0x2e68e81caa041123:0xb21c402f358e02e2!2sIstana+Kana+Kawaluyaan!8m2!3d-6.9368388!4d107.6632507!4m7!1m0!1m5!1m1!1s0x2e68e81caa041123:0xb21c402f358e02e2!2m2!1d107.6632507!2d-6.9368388?hl=en";
+  "https://goo.gl/maps/9heNjUQvsebpPcFp6";
 const MAP_TITLE = "Istana Kana Kawaluyaan";
 const MAP_ADDRESS = "Jl. Kawaluyaan Indah raya No. 9, Jatisari, Kec. Buahbatu, Kota Bandung, Jawa Barat";
 
