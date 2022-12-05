@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import foto1 from "~/images/min/QRTEDIT-9533-min.jpg";
-import foto2 from "~/images/min/QRTEDIT-0509-min.jpg";
-import foto3 from "~/images/min/QRTEDIT-0367-min.jpg";
-import foto4 from "~/images/min/QRTEDIT-0355-min.jpg";
-import foto5 from "~/images/min/QRTEDIT-0319-min.jpg";
-import foto6 from "~/images/min/QRTEDIT-9545-min.jpg";
-import foto7 from "~/images/min/QRTEDIT-0457-min.jpg";
-import foto8 from "~/images/min/QRTEDIT-0418-min.jpg";
-import foto9 from "~/images/min/QRTEDIT-0407-min.jpg";
+import foto1 from "~/images/nn/QRTEDIT-9533.jpg";
+import foto2 from "~/images/nn/QRTEDIT-0509.jpg";
+import foto3 from "~/images/nn/QRTEDIT-0367.jpg";
+import foto4 from "~/images/nn/QRTEDIT-0355.jpg";
+import foto5 from "~/images/nn/QRTEDIT-0319.jpg";
+import foto6 from "~/images/nn/QRTEDIT-9545.jpg";
+import foto7 from "~/images/nn/QRTEDIT-0457.jpg";
+import foto8 from "~/images/nn/QRTEDIT-0418.jpg";
+import foto9 from "~/images/nn/QRTEDIT-0407.jpg";
 import TextWithLine from "./Utils/TextWithLine";
 
 const photos = [

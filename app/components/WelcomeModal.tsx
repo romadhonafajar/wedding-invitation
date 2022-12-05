@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useLoaderData } from "remix";
 import { LoaderDataType } from "~/controls";
 import TextWithLine from "./Utils/TextWithLine";
-import welcomeImage from "~/images/min/QRTEDIT-9533-min.jpg";
+import welcomeImage from "~/images/nn/QRTEDIT-9533.jpg";
 
 interface WelcomeModalProps {
   isOpen: boolean;

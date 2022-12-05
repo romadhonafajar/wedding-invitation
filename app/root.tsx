@@ -9,7 +9,7 @@ import {
 import type { MetaFunction, LinksFunction } from "remix";
 import styles from "./styles/app.css";
 import skeletonStyles from "react-loading-skeleton/dist/skeleton.css";
-import ogimage from "~/images/min/QRTEDIT-9561-min.jpg";
+import ogimage from "~/images/nn/QRTEDIT-9561.jpg";
 
 export const links: LinksFunction = () => {
   return [
@@ -62,7 +62,7 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta property="og:title" content="The Wedding Of Oryza and Roma" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/romadhonafajar/wedding-invitation/main/app/images/min/QRTEDIT-0355-min.jpg"/>
+        <meta property="og:image" content="https://raw.githubusercontent.com/romadhonafajar/wedding-invitation/main/app/images/nn/QRTEDIT-0355.jpg"/>
         <meta property="description" content="The Wedding of Oryza and Roma. Sunday, 11 December 2022" />
         <meta property="og:url" content="https://wedding-oryza-roma.vercel.app" />
         <Meta />
