@@ -11,7 +11,7 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
   const onPlay = async () => {
     if (!audio.current) return;
     await audio.current.play();
-    setPlay(true);
+    ;
   };
 
   const onPause = async () => {
@@ -23,7 +23,28 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
   useEffect(() => {
     if (playParent) onPlay();
     else onPause();
+    console.log("play", play)
   }, [playParent]);
+
+  useEffect(() => {
+    // Add event listener to check if the tab is active or not
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Return a cleanup function that removes the event listener
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []); // Pass an empty array as the second argument to only run this effect once
+
+  const handleVisibilityChange = async () => {
+    // If the tab is active, play the audio
+    if (!document.hidden) {
+      await onPlay();
+    } else {
+      // If the tab is not active, pause the audio
+      await onPause();
+    }
+  }
 
   return (
     <Fragment>
