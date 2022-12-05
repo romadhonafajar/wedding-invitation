@@ -15,6 +15,7 @@ import ProtokolKesehatan from "~/components/Protokol";
 import OpeningMessage from "~/components/OpeningMessage";
 import { useLoaderData } from "remix";
 import Footer from "~/components/Footer";
+import DigitalGift from "~/components/DigitalGift";
 
 export const loader = indexLoader;
 export const action = indexAction;
@@ -101,6 +102,10 @@ export default function Index() {
 
       <SectionWrapper className="mb-10 bg-[#EFEFEF]">
         <Message />
+      </SectionWrapper>
+
+      <SectionWrapper className="mb-10 bg-[#EFEFEF]">
+        <DigitalGift />
       </SectionWrapper>
 
       <SectionWrapper className="mb-0">
