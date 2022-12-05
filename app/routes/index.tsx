@@ -7,8 +7,8 @@ import Message from "~/components/Massage";
 import SectionWrapper from "~/components/Utils/SectionWrapper";
 import WelcomeModal from "~/components/WelcomeModal";
 import { indexAction, indexLoader, LoaderDataType } from "~/controls";
-import heroBg from "~/images/QRT/QRTEDIT-0355.jpg";
-import heroBgMobile from "~/images/QRT/QRTEDIT-0355.jpg";
+import heroBg from "~/images/min/QRTEDIT-0355-min.jpg";
+import heroBgMobile from "~/images/min/QRTEDIT-0355-min.jpg";
 import MusicPlayer from "~/components/MusicPlayer";
 import GalleryPhotos from "~/components/GalleryPhotos";
 import ProtokolKesehatan from "~/components/Protokol";
@@ -20,7 +20,7 @@ export const loader = indexLoader;
 export const action = indexAction;
 
 export default function Index() {
-  const isSmallScreen = useMediaQuery({ query: `(max-width: 768px)` });
+  const isSmallScreen = useMediaQuery({ query: `(max-width: 420px)` });
 
   const [openWelcome, setOpenWelcome] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
