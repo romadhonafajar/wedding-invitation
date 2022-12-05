@@ -12,14 +12,18 @@ const DigitalGift = () => {
   // Define the bank account information that will be shown to the user
   const accountInfo = {
     bride: {
-      bank: 'BCA',
+      bank: 'BTPN',
       name: 'Oryza Sativani',
-      accountNumber: '28314193391',
+      accountNumber: '90110042177',
+      locationName: 'Jl. Permata Biru Blok T No.10, Cinunuk, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40624',
+      locationURL: 'https://goo.gl/maps/fPmdcEqhVz89gZHPA'
     },
     groom: {
       bank: 'BCA',
       name: 'Romadhona Fajar',
       accountNumber: '4371254280',
+      locationName: 'Jl. Pacitan No.13, Antapani Kidul, Kec. Antapani, Kota Bandung, Jawa Barat 40291',
+      locationURL: 'https://goo.gl/maps/cRVFFAQg6mjhjxSe7'
     },
   };
 
@@ -42,17 +46,19 @@ const DigitalGift = () => {
         {/* If the bank account information is visible, display it to the user */}
         {isVisible && (
           <div className="flex justify-center mb-5">
-            {/* <div className="text-2xl font-head mb-3">
-              <p className="mb-1 font-sans text-xl">Bank: {accountInfo.bride.bank}</p>
-              <p className="mb-1 font-sans text-xl">Atas Nama: {accountInfo.bride.name}</p>
-              <p className="mb-5 font-sans text-xl">Nomor Rekening: {accountInfo.bride.accountNumber}</p>
-              <ClipboardCopy copyText={accountInfo.bride.accountNumber}></ClipboardCopy>
-            </div> */}
-            <div className="mb-1">
-              <p className="mb-1 font-sans">Bank: {accountInfo.groom.bank}</p>
-              <p className="mb-1 font-sans">Atas Nama: {accountInfo.groom.name}</p>
-              <p className="mb-5 font-sans">Nomor Rekening: {accountInfo.groom.accountNumber}</p>
-              <ClipboardCopy copyText={accountInfo.groom.accountNumber}></ClipboardCopy>
+            <div className="mb-5 mx-2">
+              <p className="mb-5 font-sans mx-2">Alamat Rumah: {accountInfo.bride.locationName} <br/>
+                [<a target="_blank" className='text-[#CE7BB0]' href={accountInfo.bride.locationURL}>Tampilkan Lokasi</a>]
+              </p>
+              <p className="mb-1 font-sans mx-2">{accountInfo.bride.bank}-{accountInfo.bride.accountNumber}-{accountInfo.bride.name}</p>
+              <ClipboardCopy copyText={accountInfo.bride.accountNumber} copyTitle={"Copy Nomor Rekening"}></ClipboardCopy>
+            </div>
+            <div className="mb-5 mx-2">
+              <p className="mb-5 font-sans mx-2">Alamat Rumah: {accountInfo.groom.locationName} <br/>
+                [<a target="_blank" className='text-[#CE7BB0]' href={accountInfo.groom.locationURL}>Tampilkan Lokasi</a>]
+              </p>
+              <p className="mb-1 font-sans mx-2">{accountInfo.groom.bank}-{accountInfo.groom.accountNumber}-{accountInfo.groom.name}</p>
+              <ClipboardCopy copyText={accountInfo.groom.accountNumber} copyTitle={"Copy Nomor Rekening"}></ClipboardCopy>
             </div>
           </div>
           

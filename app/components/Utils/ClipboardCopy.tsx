@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-function ClipboardCopy({ copyText }: any) {
+function ClipboardCopy({ copyText, copyTitle }: any) {
   const [isCopied, setIsCopied] = useState(false);
 
   // This is the function we wrote earlier
@@ -36,7 +36,7 @@ function ClipboardCopy({ copyText }: any) {
         className='px-5 py-2 transition-all text-lg font-semibold rounded-md bg-[#CE7BB0] hover:bg-[#A267AC] outline-[#6867AC] text-white outline-4 disabled:opacity-50 disabled:pointer-events-none cursor-pointer'
         onClick={handleCopyClick}
       >
-        <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+        <span>{isCopied ? 'Copied!' : copyTitle}</span>
       </button>
     </div>
   );

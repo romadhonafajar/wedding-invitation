@@ -5,7 +5,7 @@ interface MusicPlayerProps {
 }
 
 const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
-  const [play, setPlay] = useState(false);
+  const [play, setPlay] = useState(true);
   const audio = useRef<HTMLAudioElement>(null);
 
   const onPlay = async () => {
@@ -21,10 +21,10 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
   };
 
   useEffect(() => {
-    if (playParent) onPlay();
+    if (play) onPlay();
     else onPause();
     console.log("play", play)
-  }, [playParent]);
+  }, [play]);
 
   useEffect(() => {
     // Add event listener to check if the tab is active or not
@@ -48,7 +48,7 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
 
   return (
     <Fragment>
-      <audio controls ref={audio} loop hidden>
+      <audio controls ref={audio} preload={"none"} loop hidden>
         <source src={"/weddingtheme.mp3"} type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
@@ -57,7 +57,7 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
         <button
           className="rounded-full drop-shadow-md bg-[#CE7BB0] text-4xl w-9 h-9  md:w-11 md:h-11 flex items-center justify-center"
           onClick={() => {
-            play ? onPause() : onPlay();
+            setPlay(!play);;
           }}
           aria-label="audio-control"
         >
