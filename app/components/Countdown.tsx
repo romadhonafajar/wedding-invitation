@@ -10,7 +10,7 @@ action=TEMPLATE&
 text=Resepsi+Oryza+%26+Roma+💕+&
 location=Istana%20Kana%20Kawaluyaan%2C%20Jl.%20Kawaluyaan%20Raya%20No.9%2C%20Jatisari%2C%20Kec.%20Buahbatu%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040286%2C%20Indonesia&
 details=Dengan%20sepenuh%20kerendahan%20hati%20dan%20rasa%20syukur%20kepada%20Allah%20SWT%2C%20kami%20ingin%20menyampaikan%20kabar%20bahagia%20mengenai%20resepsi%20pernikahan%20kami%20berdua%3A%20Oryza%20Sativani%20dan%20Romadhona%20Fajar%0A%0ATautan%20undangan%3A%0Ahttps%3A%2F%2Fwedding-oryza-roma.vercel.app%2F%0A%0AMerupakan%20suatu%20kebahagiaan%20bagi%20kami%20jika%20Bapak%2FIbu%2FSaudara%2Fi%20berkenan%20hadir%20dalam%20acara%20resepsi%20pernikahan%20kami%20serta%2F%20memberikan%20doa%20restu.%0A%0AAtas%20perhatiannya%2C%20kami%20ucapkan%20terima%20kasih.%0A%0AKami%20yang%20berbahagia%2C%0AOryza%20dan%20Roma&
-dates=20221211T110000Z+08:00%2F20221211T130000Z+08:00`;
+dates=20221211T110000Z+08:00%2F20221211T140000Z+08:00`;
 
 interface COUNTDOWNTYPE {
   days: number;

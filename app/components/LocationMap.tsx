@@ -41,7 +41,7 @@ const LocationMap = (data: any) => {
                 Resepsi
               </h3>
               <p className="mb-1 font-sans text-xl">Minggu, 11 Desember 2022</p>
-              <p className="mb-5 font-sans text-xl">🕰 11.00 - 13.00 WIB</p>
+              <p className="mb-5 font-sans text-xl">🕰 11.00 - 14.00 WIB</p>
               <div className="flex justify-center">
                 <a
                   href={MAP_REDIRECT_URL}
