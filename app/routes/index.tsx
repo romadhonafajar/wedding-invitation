@@ -28,7 +28,9 @@ export default function Index() {
 
   useEffect(() => {
     // console.log('modal', openWelcome)
-    document.body.style.overflow = "hidden";
+    if (openWelcome){
+      document.body.style.overflow = "hidden";
+    }
   }, [openWelcome]);
 
   const onCloseWelcomeModal = () => {
