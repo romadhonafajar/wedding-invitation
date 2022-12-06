@@ -11,7 +11,11 @@ interface WelcomeModalProps {
 
 // TODO
 export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
-  const data = useLoaderData<LoaderDataType>();;
+  const data = useLoaderData<LoaderDataType>();
+
+  function splitString(input:string) {
+    return input.split(/&|\s+dan\s+/);
+  }
   
   return (
     <div
@@ -57,7 +61,13 @@ export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
                         : "font-semibold text-center font-head bg-[#000] rounded-lg bg-opacity-50 text-white leading-7 px-4 md:px-0"
                     }
                   >
-                    {data.fullname}
+                    {splitString(data.fullname).map((name, index)=>{
+                      if (index === 0) {
+                        return (<span>{name} <br/></span>);
+                      } else {
+                        return (<span>&<br/>{name}</span>)
+                      }
+                    })}
                   </div>
                 </div>
               )}
