@@ -11,8 +11,8 @@ interface WelcomeModalProps {
 
 // TODO
 export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
-  const { remark: recipient } = useLoaderData<LoaderDataType>();
-
+  const data = useLoaderData<LoaderDataType>();;
+  
   return (
     <div
       className={
@@ -37,7 +37,7 @@ export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
 
           <div className="w-[350px] mb-8">
             <Fragment>
-              {!recipient ? (
+              {!data.fullname ? (
                 <div className="text-white text-xl bg-[#000] rounded-lg bg-opacity-50 py-3">
                   <div className="font-semibold text-center font-head italic">
                     Kepada Yth: <br />
@@ -52,12 +52,12 @@ export default function WelcomeModal({ isOpen, onClose }: WelcomeModalProps) {
                   </div>
                   <div
                     className={
-                      recipient.length < 50
+                      data.fullname.length < 50
                         ? "font-semibold text-center font-head bg-[#000] rounded-lg bg-opacity-50 text-white leading-7 text-lg py-3"
                         : "font-semibold text-center font-head bg-[#000] rounded-lg bg-opacity-50 text-white leading-7 px-4 md:px-0"
                     }
                   >
-                    {recipient}
+                    {data.fullname}
                   </div>
                 </div>
               )}

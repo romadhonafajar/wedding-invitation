@@ -71,7 +71,7 @@ export const getBothLocation = async (name?: string) => {
 
     const dataRaw = response.data.values;
     const data =
-      dataRaw?.map((data: string[]) => ({ name: data[0], isBoth: data[2] })) ??
+      dataRaw?.map((data: string[]) => ({ name: data[0], fullname: data[1], isBoth: data[2] })) ??
       [];
     const regex = new RegExp(`${name}$`, "i");
     const result = data.find((person) => regex.test(person.name));

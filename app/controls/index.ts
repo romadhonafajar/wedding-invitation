@@ -8,8 +8,9 @@ import {
 } from "~/utils/googleSheetsApi";
 
 export interface LoaderDataType {
+  recipient: string;  
+  fullname: string;
   isBoth: string;
-  remark: string;
   messages: MessageItemType[];
 }
 
@@ -24,8 +25,9 @@ export const indexLoader: LoaderFunction = async ({ request }) => {
   ]);
 
   return json<LoaderDataType>({
+    recipient: recipient,
+    fullname: bothLocation?.fullname || '',
     isBoth: bothLocation?.isBoth || recipient,
-    remark: recipientRemarks?.remarks || recipient,
     messages,
   });
 };
