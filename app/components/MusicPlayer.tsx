@@ -5,7 +5,7 @@ interface MusicPlayerProps {
 }
 
 const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(playParent);
   const audio = useRef<HTMLAudioElement>(null);
 
   const onPlay = async () => {
@@ -21,12 +21,6 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
   };
 
   useEffect(() => {
-    if (play) onPlay();
-    else onPause();
-    console.log("play", play)
-  }, [play]);
-
-  useEffect(() => {
     // Add event listener to check if the tab is active or not
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
@@ -35,6 +29,15 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []); // Pass an empty array as the second argument to only run this effect once
+
+  useEffect(() => {
+    // console.log("playParent", playParent)
+    if (play || playParent) onPlay();
+    else onPause();
+    // console.log("play", play)
+  }, [playParent]);
+
+  
 
   const handleVisibilityChange = async () => {
     // If the tab is active, play the audio

@@ -27,13 +27,15 @@ export default function Index() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // console.log('modal', openWelcome)
     document.body.style.overflow = "hidden";
-  }, []);
+  }, [openWelcome]);
 
   const onCloseWelcomeModal = () => {
     setOpenWelcome(false);
     document.body.style.overflow = "auto";
     window.scrollTo({ top: 0 });
+    // console.log('modal', openWelcome)
   };
 
   useEffect(() => {
