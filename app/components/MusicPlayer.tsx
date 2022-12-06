@@ -5,8 +5,16 @@ interface MusicPlayerProps {
 }
 
 const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
-  const [play, setPlay] = useState(playParent);
+  const [play, setPlay] = useState(true);
   const audio = useRef<HTMLAudioElement>(null);
+
+  const playState = () => {
+    if (!playParent) {
+      return false
+    } else {
+      return play
+    }
+  }
 
   const onPlay = async () => {
     if (!audio.current) return;
@@ -31,11 +39,13 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
   }, []); // Pass an empty array as the second argument to only run this effect once
 
   useEffect(() => {
-    // console.log("playParent", playParent)
-    if (play || playParent) onPlay();
+    if (!playParent) {
+      return
+    }
+
+    if (playState()) onPlay();
     else onPause();
-    // console.log("play", play)
-  }, [playParent]);
+  }, [play, playParent]);
 
   
 
@@ -64,7 +74,7 @@ const MusicPlayer = ({ play: playParent }: MusicPlayerProps) => {
           }}
           aria-label="audio-control"
         >
-          <i className={play ? "bx bx-pause" : "bx bx-play pl-1"} />
+          <i className={playState() ? "bx bx-pause" : "bx bx-play pl-1"} />
         </button>
       </div>
     </Fragment>
